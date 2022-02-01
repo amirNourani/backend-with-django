@@ -1,6 +1,8 @@
+from django.conf import settings
 from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail
+from django.conf import settings
 # Create your views here.
 
 def contact(request):
@@ -14,7 +16,7 @@ def contact(request):
             subject = cd['subject']
             message = cd['message']
             msg = f'name:{name}\nemail:{email}\nmessage:{message}'
-            send_mail(subject, msg, 'django.for.test2021@gmail.com', ['amirnurani2001@gmail.com',], fail_silently=False)
+            send_mail(subject, msg, settings.EMAIL_HOST_USER, ['amirnurani2001@gmail.com',], fail_silently=False)
             sent = True
     else:
         contact = ContactForm()
