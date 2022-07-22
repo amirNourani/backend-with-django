@@ -5,6 +5,6 @@ packages you need to install are:
 - py -m pip install pillow
 - py -m pip install ckeditor
 
-open terminal and write below commands in terminal:
+open terminal and write these commands in terminal:
 $ cd restaurant
 $ python3 manage.py runserver
