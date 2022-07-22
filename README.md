@@ -8,3 +8,4 @@ packages you need to install are:
 open terminal and write these commands in terminal:
 $ cd restaurant
 $ python3 manage.py runserver
+
