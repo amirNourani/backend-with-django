@@ -1,16 +1,32 @@
-# backend-with-django
-I downloaded a template from "https://www.free-css.com/free-css-templates/page249/yamifood" and tried to implement the server-side with Django.
-packages you need to install are:
+
+# Backend with Django
+
+You can downloaded the templates files from here "https://www.free-css.com/free-css-templates/page249/yamifood".
 
 
 
+# Packages
 
-# packages you should install
-python -m pip install django
-python -m pip install pillow
-python -m pip install ckeditor
+packages you should install are:
 
-open terminal and write these commands in terminal:
-$ cd restaurant
-$ python3 manage.py runserver
 
+```http
+  $ python -m pip install django
+```
+```http
+  $ python -m pip install ckeditor
+```
+```http
+  $ python -m pip install pillow
+```
+
+# Fire it up
+just simply go to restaurant file
+```http
+  $ cd restaurant
+```
+
+and type below command in the terminal
+```http
+  $ python manage.py runserver
+```
