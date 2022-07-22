@@ -1,7 +1,7 @@
 
 # Download templates and static files
 
-You can downloaded the templates files from [here]("https://www.free-css.com/free-css-templates/page249/yamifood")
+You can downloaded the templates files from [here](https://www.free-css.com/free-css-templates/page249/yamifood).
 
 
 
