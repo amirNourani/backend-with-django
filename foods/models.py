@@ -1,19 +1,22 @@
-from distutils.command.upload import upload
 from django.db import models
 
 # Create your models here.
+
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+    
+    def __str__(self) -> str:
+        return self.name
+    
 class Food(models.Model):
-    FOOD_TYPE = [
-        ('breakfast', 'Breakfast'),
-        ('lunch', 'Lunch'),
-        ('dinner', 'Dinner'),
-        ('drinks', 'Drinks'),
-    ]
-    name = models.CharField(max_length= 30)
+    name = models.CharField(max_length= 200)
     description = models.CharField(max_length=500)
     price = models.FloatField()
     photo_food = models.ImageField(upload_to = 'foods/')
-    food_type = models.CharField(max_length= 9, choices= FOOD_TYPE, default='drinks')
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name="category", null=True)
+    is_suggested = models.BooleanField(default=False)
     
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
+    
+    

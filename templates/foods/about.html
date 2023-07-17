@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="about-section-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="{% static 'images/about-img.jpg' %}" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                <div class="inner-column">
+                    <h1>Welcome To <span>Yamifood Restaurant</span></h1>
+                    <h4>Little Story</h4>
+                    <p>Yamifood is not a real restaurant, It's just a project that I start to test myself in developing back-end of a site.</p>
+                    <p>But I need you to think of it as a real restaurant, explore it, reserve food, just don't expect some one deliver you anything after you ordered, and tell me your opinion about this site.</p>
+                    <p>It means a lot to me</p>
+                    <a class="btn btn-lg btn-circle btn-outline-new-white" href="{% url 'reservation:reserve' %}">Order food</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

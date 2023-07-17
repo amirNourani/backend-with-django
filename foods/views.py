@@ -1,13 +1,14 @@
 from django.shortcuts import render
-from django.urls import conf
-from .models import Food
+from .models import Food, Category
 
 # Create your views here.
 def index(request):
-    food_list = Food.objects.all()
-    
+    food_list = Food.objects.filter(is_suggested = True).order_by('category')
+    categorys = Category.objects.all()
+
     context = {
-        'foods': food_list
+        'foods_list': food_list,
+        'categorys': categorys,
     }
     
     return render(request, 'foods/index.html', context)
