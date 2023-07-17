@@ -23,6 +23,5 @@ def contact(request):
         
     context = {
         'contact': contact,
-        'sent':sent,
     }
-    return render(request, 'contact/contact.html', context)
+    return render(request, 'contact/index.html', context)
