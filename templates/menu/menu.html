@@ -1,0 +1,37 @@
+<div class="menu-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Menu</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="special-menu text-center">
+					<div class="button-group filter-button-group">
+						<button class="active">All</button>
+						{% for category in categorys %}
+							<button data-filter=".{{category}}">{{category}}</button>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row special-list">
+			{% for food in foods_list %}
+				<div class="col-lg-4 col-md-6 special-grid {{food.category}}">
+					<div class="gallery-single fix">
+						<img src="{{ food.photo_food.url }}" class="img-fluid rounded" alt="Image">
+						<div class="why-text">
+							<h4>{{food.name}}</h4>
+							<p>{{food.description}}.</p>
+							<h5>${{food.price}}</h5>
+						</div>
+					</div>
+				</div>				
+			{% endfor %}
+		</div>
+	</div>
+</div>

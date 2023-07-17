@@ -1,13 +1,14 @@
 from django.shortcuts import render
-from foods.models import Food
+from foods.models import Food, Category
 
 
 # Create your views here.
 def menu(request):
-    food = Food.objects.all()
-    
+    foods_list = Food.objects.all().order_by('category')
+    categorys = Category.objects.all()
     context= {
-        'foods': food
+        'foods_list': foods_list,
+        'categorys': categorys
     }
     
-    return render(request, 'menu/menu.html', context)
+    return render(request, 'menu/index.html', context)
