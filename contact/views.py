@@ -6,7 +6,6 @@ from django.conf import settings
 # Create your views here.
 
 def contact(request):
-    sent = False
     if request.method == "POST":
         contact = ContactForm(request.POST)
         if contact.is_valid():
