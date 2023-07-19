@@ -1,21 +1,17 @@
-import re
 from django.shortcuts import render
-
 from .forms import ReservationForm
-
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 # Create your views here.
 
+@login_required(login_url='login:login')
 def reserve(request):
-    reservation = ReservationForm()
+    form = ReservationForm()
     if request.method == "POST":
-        reservation = ReservationForm(request.POST)
-        if reservation.is_valid():
-            reservation.save()
-    else:
-        reservation = ReservationForm()
-        
-    context = {
-        'reserve': reservation
-    }
-    
-    return render(request, 'reservation/reservation.html', context)
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            messages.success(request, "Your reservation is successfully done.")
+            form.save()
+        else:
+            messages.error(request, "Unsuccessful reservation. Invalid information.")
+    return render(request, 'reservation/index.html', {'form': form})            

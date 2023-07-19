@@ -1,16 +1,16 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en"><!-- Basic -->
+<html lang="en">
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
+
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-     <!-- Site Metas -->
-    <title>Yamifood Restaurant - Responsive HTML5 Template</title>  
+
+    <!-- Site Metas -->
+    <title>Yamifood Restaurant</title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,10 +28,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -42,23 +38,14 @@
 	
 
     {% block content %}
-
     {% endblock content %}
 
-    
-    <!-- Start Customer Reviews -->
-	{% include 'partials/_customer-review.html' %}	
-	<!-- End Customer Reviews -->
-	
-	<!-- Start Contact info -->
-	{% include 'partials/_contact-info.html' %}	
-	<!-- End Contact info -->
 	
 	<!-- Start Footer -->
 	{% include 'partials/_footer.html' %}
 	<!-- End Footer -->
 	
-	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+	
 
 	<!-- ALL JS FILES -->
 	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>

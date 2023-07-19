@@ -32,22 +32,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'foods',
-    'reservation',
-    'blogs',
-    'contact',
-    'ckeditor',
-    'menu',
-    'about',
-    'stuff',
-    'gallery',
-    'login',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Internal apps
+    'foods.apps.FoodsConfig',
+    'menu.apps.MenuConfig',
+    'contact.apps.ContactConfig',
+    'login.apps.LoginConfig',
+    'reservation.apps.ReservationConfig',
 ]
 
 MIDDLEWARE = [
@@ -208,10 +205,10 @@ CKEDITOR_CONFIGS = {
 
 
 # ---- Email ----
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'django.for.test2021@gmail.com' 
-EMAIL_HOST_PASSWORD = 'D12341234'
-EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# ---------------
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'django.for.test2021@gmail.com' 
+EMAIL_HOST_PASSWORD = 'xkvhqvotntqmdbcg'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
