@@ -7,7 +7,7 @@ Yami-food is simple restaurant web-app creating with django, html, css.
 * [Setup](#setup)
 
 ## Download Template
-You can downloaded the template and static files from [here](https://www.free-css.com/free-css-templates/page249/yamifood).
+You can downloaded the template and static files from [here](https://www.free-css.com/free-css-templates/page249/yamifood) or see [DEMO](http://amirous.pythonanywhere.com/)
 
 
 ## Setup
