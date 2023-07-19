@@ -1,32 +1,28 @@
-
-# Download templates and static files
-
-You can downloaded the templates files from [here](https://www.free-css.com/free-css-templates/page249/yamifood).
+# Yami-food Restaurant
+Yami-food is simple restaurant web-app creating with django, html, css. 
 
 
+## Table of contents
+* [Download Template](#download-template)
+* [Setup](#setup)
 
-# Packages
+## Download Template
+You can downloaded the template and static files from [here](https://www.free-css.com/free-css-templates/page249/yamifood).
 
-packages you should install are:
 
-
+## Setup
+notice that first you need to install the requirement packages. open your terminal and write below commands:
 ```
-  $ python -m pip install django
+$ cd yamifood-restaurant/
+$ pip install -r requirements.txt 
 ```
+Then run the project in your local machine using: 
 ```
-  $ python -m pip install ckeditor
-```
-```
-  $ python -m pip install pillow
-```
-
-# Fire it up
-just simply go to restaurant file
-```
-  $ cd restaurant
+$ python3 manage.py runserver
+or
+$ ./manage.py runserver
 ```
 
-and type below command in the terminal
-```
-  $ python manage.py runserver
-```
+Feel free to develop and request pulls to this, any time :) 
+
+Best regards.
